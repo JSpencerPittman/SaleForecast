@@ -1,0 +1,10 @@
+# Is the holiday celebrated in the same region
+def holidayCelebratedInLocale(holiday_row, train_row):
+    if holiday_row.locale == "National":
+         return True
+    elif holiday_row.locale == "Regional" and holiday_row.locale_name == train_row.state:
+        return True
+    elif holiday_row.locale_name == train_row.city:
+         return True
+    else:
+        return False
